@@ -1,1 +1,14 @@
 <p>Shop Component</p>
+
+<input type="text" class="input-style" [(ngModel)]="userName">
+
+<p>{{userName}}</p>
+
+<button [disabled]="userName === ''" (click)="onResetValue()" class="btn btn-primary">Clear Name</button>
+
+<button  (click)="onCreateProduct()" class="btn btn-primary">Push Profuct name</button>
+
+
+<!-- <app-product-list *ngFor="let product of products"></app-product-list> -->
+
+<app-product-list @for(product of products; track product)></app-product-list>

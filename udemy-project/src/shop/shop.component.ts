@@ -7,5 +7,17 @@ import { Component } from "@angular/core";
 })
 
 export class ShopComponent {
+  userName: string = '';
+  products = [
+    'TestProduct',
+    'TestProduct 2'
+  ]
 
+  onResetValue() {
+    this.userName = ''
+  }
+
+  onCreateProduct(){
+    this.products.push(this.userName)
+  }
 }
